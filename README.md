@@ -1,33 +1,42 @@
 # nodejs-api-filter
 
-The server uses Loopback as ORM and the client uses Angular Reactive Forms to real-time render items list from the Loopback API.
+This project uses Loopback 3 as ORM and Angular 5 as client. Use of Reactive Forms filter to real-time render items list through Loopback API response.
 
 ## Getting Started
 
 ### Prerequisites
 
 Make sure you have Node 8.0.0 or higher, together with NPM 6 properly installed (https://nodejs.org/en/download/)
-Also, you need an instance of MongoDB (3.6.x or later) running as the API works with it (https://docs.mongodb.com/manual/installation/)
 
-### Installing
-
-Open a command line console (Run the below commands as root user to avoid permission errors).
-
-Install Angular CLI
+Angular CLI should be installed globally to run the UI server. The client part of this project was made using Angular CLI: 1.6.5
 
 ```
 npm install -g @angular/cli
 ```
 
+Also, you need an instance of MongoDB (3.6.x or later) running as the API works with it (https://docs.mongodb.com/manual/installation/)
+
+Once you know MongoDB is installed and the directory `/data/db` exists, open a terminal window and navigate to MongoDB installation folder and run:
+
+```
+./bin/mongod
+```
+
+### Installing
+
+Open a command line console (Run the below commands as root user to avoid permission errors).
+
 Navigate to the project root directory
 
-Install NPM dependencies
+Install NPM dependencies by running:
 
 ```
 npm install
 ```
 
 ## Run Loopback server
+
+In order to establish connection with the MongoDB database, run:
 
 ```
 node .
@@ -37,7 +46,7 @@ Open `http://localhost:3000/explorer/` in your browser. Now you are able to see 
 
 Get back to terminal and navigate to the ./client/hotels-ui folder
 
-Install NPM dependencies
+Install NPM dependencies by running:
 
 ```
 npm install

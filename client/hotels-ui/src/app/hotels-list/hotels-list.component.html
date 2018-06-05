@@ -1,0 +1,6 @@
+<!-- <li *ngFor="let user of userObservable | async as users; index as i; first as isFirst">
+  {{i}}/{{users.length}}. {{user}} <span *ngIf="isFirst">default</span>
+</li> -->
+<div *ngFor="let hotel of hotelsList">
+  <app-hotel-item [hotel]="hotel"></app-hotel-item>
+</div>

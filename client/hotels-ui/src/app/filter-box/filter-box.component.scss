@@ -1,0 +1,94 @@
+:host {
+  font-size: 1rem;
+  display: block;
+}
+
+.filters-header {
+  background-color: #ffffff;
+  color: #444444;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1;
+  padding: 13px 20px;
+  margin-bottom: 5px;
+}
+
+.name-input {
+  height: 32px;
+  border-radius: 2px;
+  border: 1px solid rgb(204,204,204);
+  padding: 4px;
+  padding-left: 10px;
+  outline: none;
+  box-sizing: border-box;
+  font-size: 13px;
+  width: 185px;
+}
+
+mat-accordion {
+  mat-expansion-panel {
+    margin-bottom: 5px;
+    box-shadow: none;
+    background-color: #ffffff;
+
+    &.mat-expanded {
+      margin: 5px 0;
+    }
+  }
+
+  mat-expansion-panel-header {
+    padding: 0 16px;
+    transition: none;
+  }
+
+  mat-panel-title mat-icon {
+    height: 16px;
+    color: #157ab1;
+    margin-right: 2px;
+  }
+
+  .filter-label {
+    color: #157ab1;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  ::ng-deep {
+    .mat-expansion-panel-body {
+      padding: 8px 16px;
+    }
+
+    .mat-expansion-indicator {
+      right: 4px;
+      position: relative;
+    
+      &::after {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 6px 6px 0 6px;
+        border-color: #157ab1 transparent transparent transparent;
+        padding: 0;
+        transform: rotate(360deg); 
+      }
+    }
+  }
+
+  .stars-filter-list {
+    margin-bottom: 8px;
+    li {
+      margin-bottom: 14px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    mat-icon {
+      height: 14px;
+      color: rgb(253,186,18);
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Hotel",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "forceId": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "required": true,
+      "id": true
+    },
+    "name": {
+      "type": "string",
+      "default": "Hotel sin nombre"
+    },
+    "stars": {
+      "type": "number"
+    },
+    "price": {
+      "type": "number",
+      "required": true,
+      "default": 0
+    },
+    "image": {
+      "type": "string",
+      "default": "no_photo.jpg"
+    },
+    "amenities": {
+      "type": [
+        "string"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,51 @@
+header {
+  background: #012e84;
+  background: -moz-linear-gradient(left, #012e84 0%, #1e4884 50%, #012e84 100%);
+  background: -webkit-linear-gradient(left, #012e84 0%,#1e4884 50%,#012e84 100%);
+  background: linear-gradient(to right, #012e84 0%,#1e4884 50%,#012e84 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#012e84', endColorstr='#012e84',GradientType=1 );
+  border-bottom: solid 2px rgb(118,146,185);
+  padding-left: 7px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  height: 82px;
+
+  a.logo {
+    align-self: center;
+  }
+}
+
+.content {
+  padding: 24px;
+  display: flex;
+  flex-direction: row;
+}
+
+app-filter-box {
+  width: 296px;
+  margin-right: 16px;
+}
+
+app-hotels-list {
+  flex: 1;
+}
+
+@media screen and (max-width: 1024px) {
+  header {
+    height: 62px;
+    border: none;
+    padding-left: 16px;
+    img {
+      width: 150px;
+    }
+  }
+  .content {
+    padding: 8px;
+    flex-direction: column;
+  }
+  app-filter-box {
+    width: auto;
+    margin-right: 0;
+  }
+}

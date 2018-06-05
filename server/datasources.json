@@ -1,0 +1,22 @@
+{
+  "db": {
+    "host": "localhost",
+    "port": 27017,
+    "url": "",
+    "database": "hotelsdb",
+    "password": "",
+    "name": "db",
+    "user": "",
+    "connector": "mongodb"
+  },
+  "mongods": {
+    "host": "localhost",
+    "port": 27017,
+    "url": "",
+    "database": "almundodb",
+    "password": "",
+    "name": "mongods",
+    "user": "",
+    "connector": "mongodb"
+  }
+}

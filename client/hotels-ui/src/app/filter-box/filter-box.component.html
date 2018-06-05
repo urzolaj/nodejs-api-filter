@@ -1,0 +1,39 @@
+<form [formGroup]="filterForm" novalidate>
+  <div class="filters-header">Filtros</div>
+  <mat-accordion>
+    <mat-expansion-panel class="name-panel">
+      <mat-expansion-panel-header [collapsedHeight]="'42px'" [expandedHeight]="'42px'">
+        <mat-panel-title>
+          <mat-icon class="search-icon" svgIcon="search"></mat-icon>
+          <span class="filter-label">Nombre de hotel</span>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="name-filter">
+        <input class="name-input" formControlName="name" placeholder="Ingrese el nombre del hotel">
+        <a class="button" (click)="filterHotelsByName()">
+          Aceptar
+        </a>
+      </div>
+    </mat-expansion-panel>
+    <mat-expansion-panel class="stars-panel">
+      <mat-expansion-panel-header class="stars-filter-header" [collapsedHeight]="'42px'" [expandedHeight]="'42px'">
+        <mat-panel-title>
+          <mat-icon class="star-icon" svgIcon="star"></mat-icon>
+          <span class="filter-label">Estrellas</span>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <ul class="stars-filter-list">
+        <li *ngFor="let star of stars.controls; let i=index">
+          <input type="checkbox" [formControl]="star"/>
+          <span *ngIf="i == 0"> Todas las estrellas</span>
+          <mat-icon 
+            *ngFor="let count of starsList[i].size"
+            class="star-icon"
+            svgIcon="star"
+          >
+          </mat-icon>
+        </li>
+      </ul>
+    </mat-expansion-panel>
+  </mat-accordion>
+</form>
